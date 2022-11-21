@@ -1,6 +1,10 @@
 from math import sqrt
 import numpy
+
+
 # critics dictionary
+
+
 critics = {
     'Lisa Rose': {
         'Lady in the water': 2.5,
@@ -96,7 +100,7 @@ def top_matches(prefs, person, n=5, simularity=sim_pearson):
 # top recommendations
 
 
-def get_rec(prefs, person, simularity=sim_pearson):
+def get_rec(prefs, person,  simularity=sim_pearson):
     totals = {}
     sim_sums = {}
     for other in prefs:
@@ -116,7 +120,8 @@ def get_rec(prefs, person, simularity=sim_pearson):
 
     rank.sort()
     rank.reverse()
-    return rank
+    a = int(input("Enter the number of recommendations: "))
+    return rank[:a]
 
 
 if __name__ == "__main__":
