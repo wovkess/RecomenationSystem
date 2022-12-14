@@ -100,6 +100,10 @@ def top_matches(prefs, person, n=5, simularity=sim_pearson):
 # top recommendations
 
 
+prefs = critics
+person = "Vova"
+
+
 def get_rec(prefs, person,  simularity=sim_pearson):
     totals = {}
     sim_sums = {}
@@ -124,5 +128,5 @@ def get_rec(prefs, person,  simularity=sim_pearson):
     return rank[:a]
 
 
-if __name__ == "__main__":
-    print(get_rec(critics, "Vova"))
+if __name__ == '__main__':
+    print(get_rec(prefs, person))
